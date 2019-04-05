@@ -1,0 +1,16 @@
+<h1>Lista movimentos mensalistas {{movmensalistas.mensalista.veiculo}}</h1>
+
+{% for movmensalista in movmensalistas %}
+    <ul>
+        <a href="{% url 'core_movmensalista_update' movmensalista.id %}">{{movmensalista.plca}}</a>
+                
+    </ul>
+{% endfor %}
+
+<h2>Cadastro de Movimentos mensalistas</h2>
+
+<form action="{% url 'core_novo_movmensalista' %}" method="POST">
+    {% csrf_token %}
+    {{forms.as_p}}
+     <button type="submit">Cadastrar</button>
+</form>
