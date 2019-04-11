@@ -1,6 +1,14 @@
-<h2>Tem certeza que quer deletar: {{mensalista}}</h2>
+{% extends "base.html" %}
 
-<form action="{% url 'core_mensalista_delete' mensalista.id %}" method="POST">
-    {% csrf_token %}
-    <button type="submit">Deletar</button>
-</form>
+
+{% block main %}
+
+    <h2>Tem certeza que quer deletar: {{mensalista}}</h2>
+
+    <form action="{% url 'core_mensalista_delete' mensalista.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Deletar</button>
+    </form>
+
+
+{% endblock  %}
