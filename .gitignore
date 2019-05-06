@@ -4,3 +4,5 @@ venv
 .vEnv
 *pyc
 *requirements-dev.txt
+requirements-dev.txt
+
