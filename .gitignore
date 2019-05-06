@@ -3,3 +3,4 @@ venv
 *.sqlite3
 .vEnv
 *pyc
+*requirements-dev.txt
